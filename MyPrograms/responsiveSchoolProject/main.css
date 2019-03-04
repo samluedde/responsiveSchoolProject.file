@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .logo > img {
+    width: 50px;
+  }
+  
+  header, .product, ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+  margin-top: 10px;
+  }
+  
+  h1 {
+    margin-top: 10PX;
+  }
+  
+  .navbar {
+    width: auto;
+    background-color: slategray;
+    margin-bottom: 20px;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+  }
+  
+  #toggle-menu:checked ~ ul.menu {
+    position: absolute;
+    display: block;
+  }
+  
+  #toggle-menu {
+    display: none;
+  }
+  
+  .menu {
+    list-style: none;
+    background-color: slategray;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+    border-top: 1px solid white;
+  }
+  
+  .menu li {
+    border-bottom: 1px solid black;
+  }
+  
+  ul li {
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+  
+  ul li:hover {
+    color: aquamarine;
+  }
+  
+  .product {
+    border: 1px solid rgb(236, 235, 235);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 325px;
+    padding: 3px 3px 0px;
+  }
+  
+  .social {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly ;
+    padding: 0;
+  }
+  
+  footer {
+    border-top: 1px solid rgb(236, 235, 235);
+    margin-top: 35px;
+    height: 100px;
+    /* position: fixed; */
+    display: block;
+    top: 60px;
+   bottom: 0;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 550px) and (max-width: 999px) {
+    header {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+  
+    .product {
+      width: auto;
+      margin: 0px 80px 5px;
+    }
+  }
+  
+  @media screen and (min-width: 1000px) {
+    header {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  
+    h1 {
+      margin: 0;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  
+    .menu {
+      display: flex;
+      position: static;
+      margin-bottom: 25px;
+      justify-content: flex-end
+     
+    }
+  
+    .menu li {
+      color: white;
+      padding: 15px 25px;
+    }
+  
+    main {
+      display: flex;
+      flex-direction: row;
+    }
+  }
